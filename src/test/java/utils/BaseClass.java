@@ -14,14 +14,12 @@ public class BaseClass {
             }
             return driver;
               }
-
     public static void quitDriver() {
 
-       // if (driver != null) {
-            driver.close();
-            //driver.close();
-          //  driver = null;
-       // }
+        if (driver != null) {
+            driver.quit();
+            driver = null;
+        }
     }
 }
 
