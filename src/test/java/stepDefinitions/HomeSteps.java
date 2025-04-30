@@ -15,14 +15,12 @@ public class HomeSteps {
     public void userClicksOnTheCartIcon() {
         homePage.clickCartIcon();
     }
-
     @And("User adds the {string} item to the cart")
     public void
     userAddsTheItemToTheCart(String itemName) {
        homePage.addItemToCart(itemName);
 
     }
-
     @Then("User should see the {string} item in the cart")
     public void userShouldSeeTheItemInTheCart(String itemName) {
         Assert.assertTrue(homePage.isItemInCart(), "Item was not found in the cart");
